@@ -1,5 +1,7 @@
 # 🚀 Integrated Analytics Dashboard
 
+
+
 <!-- 핵심 배지 (필수) -->
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://ai-smart-tire-intelligence-dpzyik9vqz9bucughnflej.streamlit.app/)
 [![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
@@ -24,6 +26,7 @@
 [![Fleet Management](https://img.shields.io/badge/Fleet-Management-orange)](https://github.com/yourusername/ai-smart-tire-intelligence)
 [![Data Analytics](https://img.shields.io/badge/Data-Analytics-blue)](https://github.com/yourusername/ai-smart-tire-intelligence)
 [![NLP](https://img.shields.io/badge/NLP-Sentiment%20Analysis-green)](https://github.com/yourusername/ai-smart-tire-intelligence)
+
 
 
 > **차량 운영 최적화를 위한 통합 분석 플랫폼**  
@@ -413,7 +416,11 @@ integrated-analytics-dashboard/
 │   ├── vehicle_efficiency.csv     # 자동차 표시연비 (공공데이터포털)
 │   ├── vehicle_distance.csv       # 일평균 주행거리 (공공데이터포털)
 │   ├── fuel_prices.csv            # 주유소 평균가격 (오피넷)
-│   ├── tbr_market.db              # TBR 시장 데이터 (SQLite)
+│   ├── tbr_market.db              # TBR 시장 데이터 (SQLite) 
+│   │   https://comtradeplus.un.org/TradeFlow 
+│   │   UN Comtrade Data 연도별 국가별 수출량 (HS 4011)을 csv로 다운로드 후 db에 적재함.
+│   │   최근 5년 (2020~2024)
+│   │   DB 주요 컬럼명: reporterISO (Country) / cifValue (Export Value) / forValue (Import Value)
 │   └── ev_tire_reddit_filtered.csv # EV 타이어 Reddit 데이터
 ├── requirements.txt                # Python 의존성 파일
 ├── .gitignore                     # Git 제외 파일 설정
@@ -424,7 +431,7 @@ integrated-analytics-dashboard/
 
 ## 🎯 추가 개발 로드맵
 
-### **Phase 2: AI 고도화 예정**
+### **Phase 2: AI 고도화 예정 내용**
 - **예측 모델링**: 타이어 교체 시기 예측 알고리즘
 - **이상 탐지**: 비정상적 연비 패턴 자동 감지
 - **추천 시스템**: 사용 패턴 기반 최적 타이어 추천
