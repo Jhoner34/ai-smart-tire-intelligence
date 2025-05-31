@@ -1,0 +1,303 @@
+# .gitignore
+
+# ========================================
+# Python
+# ========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ========================================
+# Virtual Environments
+# ========================================
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.python-version
+
+# UV Package Manager
+.uv/
+uv.lock
+
+# ========================================
+# IDE & Editor
+# ========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# PyCharm
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+
+# ========================================
+# Jupyter Notebooks
+# ========================================
+.ipynb_checkpoints
+*.ipynb
+
+# ========================================
+# Logs & Temporary Files
+# ========================================
+*.log
+*.tmp
+*.temp
+logs/
+log/
+temp/
+tmp/
+
+# ========================================
+# Environment Variables & Secrets
+# ========================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+secrets.toml
+config.toml
+*.key
+*.pem
+*.cert
+
+# ========================================
+# Streamlit
+# ========================================
+.streamlit/secrets.toml
+.streamlit/config.toml
+
+# ========================================
+# Data Files (선택적으로 제외)
+# ========================================
+# 개발용 대용량 데이터 파일들
+*.csv.backup
+*.xlsx.backup
+*.db.backup
+*_large.csv
+*_large.xlsx
+*_temp.*
+
+# 사용자 업로드 파일들
+uploads/
+user_data/
+temp_uploads/
+
+# ========================================
+# Machine Learning & Analytics
+# ========================================
+# Model files
+*.pkl
+*.pickle
+*.joblib
+*.h5
+*.hdf5
+models/
+checkpoints/
+
+# NLTK data (if downloaded locally)
+nltk_data/
+
+# ========================================
+# Database
+# ========================================
+# SQLite backup files
+*.db-journal
+*.db-wal
+*.db-shm
+
+# 로컬 테스트용 DB (운영 DB는 포함)
+*_test.db
+*_local.db
+*_dev.db
+
+# ========================================
+# Testing & Coverage
+# ========================================
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# ========================================
+# Documentation
+# ========================================
+docs/_build/
+site/
+
+# ========================================
+# OS generated files
+# ========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# ========================================
+# Package managers
+# ========================================
+# npm
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# pip
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ========================================
+# Deployment & CI/CD
+# ========================================
+.github/workflows/secrets/
+.vercel
+.netlify
+.railway
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# ========================================
+# 프로젝트별 제외 파일
+# ========================================
+# 임시 분석 파일들
+analysis_temp/
+scratch/
+experimental/
+
+# 백업 폴더들 (모든 위치의 backup 폴더 제외)
+backup/
+backups/
+*backup/
+*backups/
+*/backup/
+*/backups/
+**/backup/
+**/backups/
+
+# 설정 백업
+config_backup/
+settings_backup/
+
+# 개인 메모 파일
+TODO.md
+NOTES.md
+personal_notes.txt
+
+# ========================================
+# 중요: 포함해야 할 파일들 예외 처리
+# ========================================
+# 기본 데이터 파일들은 포함 (느낌표로 예외 처리)
+!data/
+!data/*.csv
+!data/*.xlsx
+!data/*.db
+!data/fuel_prices.csv
+!data/vehicle_distance.csv
+!data/vehicle_efficiency.csv
+!data/trade_data.csv
+!data/tbr_market_data.xlsx
+!data/tbr_market.db
+!data/ev_tire_reddit_filtered.csv
+
+# 설정 파일들 포함
+!requirements.txt
+!pyproject.toml
+!README.md
+!.streamlit/config.toml.example
+
+# ========================================
+# 보안 관련 (절대 커밋하면 안 되는 파일들)
+# ========================================
+# API Keys
+*api_key*
+*secret_key*
+*private_key*
+credentials.json
+service-account*.json
+
+# Reddit API credentials
+reddit_credentials.py
+praw.ini
+
+# Database passwords
+db_password.txt
+database_url.txt
+
+# SSL certificates
+*.crt
+*.key
+*.pem
+*.p12
+*.pfx
+
+# AWS credentials
+.aws/
+aws-credentials.txt
+
+# Google Cloud credentials
+gcloud-credentials.json
+google-credentials.json
