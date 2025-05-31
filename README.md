@@ -1,8 +1,37 @@
 # 🚀 Integrated Analytics Dashboard
 
+<!-- 핵심 배지 (필수) -->
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://ai-smart-tire-intelligence-dpzyik9vqz9bucughnflej.streamlit.app/)
+[![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+<!-- 기술 스택 배지 -->
+[![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=flat&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
+[![Plotly](https://img.shields.io/badge/Plotly-%233F4F75.svg?style=flat&logo=plotly&logoColor=white)](https://plotly.com/)
+[![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=flat&logo=sqlite&logoColor=white)](https://www.sqlite.org/)
+[![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=flat&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
+
+<!-- 프로젝트 상태 배지 -->
+[![GitHub last commit](https://img.shields.io/github/last-commit/yourusername/ai-smart-tire-intelligence)](https://github.com/yourusername/ai-smart-tire-intelligence/commits)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/yourusername/ai-smart-tire-intelligence/graphs/commit-activity)
+[![GitHub repo size](https://img.shields.io/github/repo-size/yourusername/ai-smart-tire-intelligence)](https://github.com/yourusername/ai-smart-tire-intelligence)
+
+<!-- 소셜 배지 -->
+[![GitHub stars](https://img.shields.io/github/stars/yourusername/ai-smart-tire-intelligence?style=social)](https://github.com/yourusername/ai-smart-tire-intelligence/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/yourusername/ai-smart-tire-intelligence?style=social)](https://github.com/yourusername/ai-smart-tire-intelligence/network/members)
+
+<!-- 산업별 특화 배지 -->
+[![Fleet Management](https://img.shields.io/badge/Fleet-Management-orange)](https://github.com/yourusername/ai-smart-tire-intelligence)
+[![Data Analytics](https://img.shields.io/badge/Data-Analytics-blue)](https://github.com/yourusername/ai-smart-tire-intelligence)
+[![NLP](https://img.shields.io/badge/NLP-Sentiment%20Analysis-green)](https://github.com/yourusername/ai-smart-tire-intelligence)
+
+
 > **차량 운영 최적화를 위한 통합 분석 플랫폼**  
 > Fleet TCO 계산, 글로벌 TBR 시장 분석, EV 타이어 인사이트를 하나의 대시보드에서 제공
 
+## 🌐 라이브 데모
+
+**배포된 앱**: [AI Smart Tire Intelligence](https://ai-smart-tire-intelligence-dpzyik9vqz9bucughnflej.streamlit.app/)
 
 ## 📋 프로젝트 개요
 
@@ -64,6 +93,47 @@
 | **교체 주기** | 타이어 교체 주기 (km) | 12,000km | 업계 표준 | ⭐⭐⭐⭐⭐ |
 | **일평균 주행거리** | 화물차 기준 (km/일) | 120km | 공공데이터포털 통계 | ⭐⭐⭐⭐⭐ |
 | **복합 연비** | 화물차 평균 (km/ℓ) | 8.5km/ℓ | 자동차 표시연비 데이터 | ⭐⭐⭐⭐ |
+
+#### 🔢 **TCO 계산 공식 및 검증**
+
+**기본 계산 공식**:
+```
+연간 타이어 비용 = (연간 주행거리 ÷ 교체 주기) × 타이어 수 × 개당 단가
+연간 연료비 = (연간 주행거리 ÷ 연비) × 연료단가
+연간 TCO = 연간 연료비 + 연간 타이어 비용
+```
+
+**실제 계산 검증 예시**:
+
+**설정값**:
+- 타이어 수: 4개
+- 타이어 단가: 250,000원/개
+- 교체 주기: 100,000km
+- 연간 주행거리: 15,000km (41km/일 × 365일)
+- 연비: 8.5km/ℓ
+- 연료가격: 1,580원/ℓ
+
+**단계별 계산**:
+```
+1. 연간 타이어 교체 횟수 = 15,000km ÷ 100,000km = 0.15회
+
+2. 연간 타이어 비용 = 0.15 × 4개 × 250,000원 = 150,000원
+
+3. 연간 연료 소비량 = 15,000km ÷ 8.5km/ℓ = 1,765ℓ
+
+4. 연간 연료비 = 1,765ℓ × 1,580원 = 2,789,700원
+
+5. 연간 TCO = 2,789,700원 + 150,000원 = 2,939,700원
+```
+
+**비용 구성 비율**:
+- **연료비**: 2,789,700원 (94.9%)
+- **타이어비**: 150,000원 (5.1%)
+
+**⚠️ 계산 시 주의사항**:
+- 타이어 교체는 **부분 교체**가 아닌 **전체 세트 교체** 기준
+- 연간 주행거리는 **실제 운행 데이터** 기반으로 조정 필요
+- 연료가격은 **월별 변동성**을 고려한 평균값 사용
 
 #### 💡 **핵심 비즈니스 인사이트**
 
@@ -180,6 +250,24 @@
 | **성능 이슈** | noise, wear | 소음, 마모 문제점 |
 | **브랜드** | Michelin, Continental, Pirelli | 브랜드별 인식 분석 |
 
+#### ⚙️ **분석 설정 파라미터**
+
+| 파라미터 | 설명 | 기본값 | 범위 | 비즈니스 의미 |
+|----------|------|--------|------|---------------|
+| **키워드 분석 개수** | TF-IDF 분석 시 추출할 상위 키워드 수량 | 20개 | 10-50개 | 분석 깊이 조절 (많을수록 세밀한 분석) |
+| **최소 점수** | 분석 대상 게시물의 최소 추천수 임계값 | 1점 | 0-100점 | 데이터 품질 필터링 (높을수록 인기 게시물만) |
+
+**파라미터 활용 가이드**:
+- **키워드 분석 개수**
+  - **10-15개**: 핵심 트렌드만 파악 (경영진 보고용)
+  - **20-30개**: 표준 분석 (제품 기획자용)
+  - **40-50개**: 상세 분석 (R&D팀용)
+
+- **최소 점수**
+  - **1-5점**: 전체 의견 수렴 (광범위한 인사이트)
+  - **10-20점**: 주목받는 이슈 (중요도 높은 의견)
+  - **50점 이상**: 화제성 높은 핫이슈 (바이럴 분석)
+
 #### 🧠 **NLP 분석 방법론**
 
 **1. 텍스트 전처리**
@@ -286,7 +374,7 @@ python create_sample_data.py  # 샘플 데이터 자동 생성
 
 ### **3. 애플리케이션 실행**
 ```bash
-streamlit run main.py
+streamlit run src/main.py
 ```
 
 ### **4. 브라우저 접속**
@@ -320,22 +408,23 @@ http://localhost:8501
 ```
 integrated-analytics-dashboard/
 ├── src/
-│   └── main.py                 # 실행
+│   └── main.py                 # 메인 애플리케이션 실행 파일
 ├── data/                           # 데이터 폴더
 │   ├── vehicle_efficiency.csv     # 자동차 표시연비 (공공데이터포털)
 │   ├── vehicle_distance.csv       # 일평균 주행거리 (공공데이터포털)
 │   ├── fuel_prices.csv            # 주유소 평균가격 (오피넷)
 │   ├── tbr_market.db              # TBR 시장 데이터 (SQLite)
 │   └── ev_tire_reddit_filtered.csv # EV 타이어 Reddit 데이터
-└── README.md                          # 문서
-
+├── requirements.txt                # Python 의존성 파일
+├── .gitignore                     # Git 제외 파일 설정
+└── README.md                      # 프로젝트 문서
 ```
 
 ---
 
 ## 🎯 추가 개발 로드맵
 
-### **Phase 2: AI 고도화**
+### **Phase 2: AI 고도화 예정**
 - **예측 모델링**: 타이어 교체 시기 예측 알고리즘
 - **이상 탐지**: 비정상적 연비 패턴 자동 감지
 - **추천 시스템**: 사용 패턴 기반 최적 타이어 추천
@@ -344,9 +433,6 @@ integrated-analytics-dashboard/
 - **모바일 앱**: 현장 관리자용 모바일 대시보드
 - **API 제공**: 외부 시스템 연동을 위한 RESTful API
 - **실시간 알림**: 임계치 도달 시 자동 알림 시스템
-
----
-
 
 ---
 
